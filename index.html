@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Landing Page -->
+  <section id="landing">
+    <h1>Halo, <span id="namaTamu">Tamu</span>!</h1>
+    <p>Kami mengundangmu ke pernikahan kami.</p>
+    <button id="openInvitation">💌 Buka Undangan</button>
+  </section>
+  <header>
+    <img src="assets/bunga.png" alt="hiasan bunga" class="bunga-overlay" />
+  </header>
+  <!-- Main Content (Hidden initially) -->
+  <!-- tambahin class="hidden" nanti -->
+  <main id="mainContent" class="hidden">
+    <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+    <button id="toggleMusic">🔊</button>
+
+    <section style="justify-content: center;">
+      <section class="hero">
+        <img src="assets/1st-Photo.png" alt="Foto Pasangan"/>
+        <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 18px;">UNDANGAN PERNIKAHAN</h2>
+        <h1 id="nama-hero" style="font-family: 'Times New Roman', Times, serif;font-weight: 500 ;font-size: 52px;">Ailsa & Aditya</h1>
+        
+        <h3>Kepada Yth.</h3>
+        <h3>Bapak/Ibu/Saudara/i</h3>
+        <h2 style="font-weight: 700; font-size: 20px;">Nama Tamu</h2>
+      </section>
+
+      <hr class="separator"/>
+
+      <section>
+        <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/2nd-Photo.png" alt="Foto Pasangan"/></div>
+        <p style="margin-top: 32px;">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+        <p>(Q.S. Ar-Rum : 21)</p>
+      </section>
+
+      <hr class="separator"/>
+
+      <section>
+        <div class="pengantin">
+          <p style="margin-bottom: 32px;">Dengan syukur dan sukacita,
+          kami dengan bahagia mengumumkan pernikahan kami kepada keluarga dan sahabat terkasih.</p>
+          <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/3rd-Photo.png" alt="Foto Pasangan"/></div>
+          <h2 id="nama-pengantin">Ailsa Zayyan Salsabila</h2>
+          <h3 id="orang-tua">PUTRI PERTAMA DARI BAPAK <strong>M IHSAN DARIUS</strong> DAN IBU <strong>DIAN AYU HASANAH</strong></h3>
+        </div>
+
+        <p style="margin-top: 68px; margin-bottom: 68px; font-family: 'Times New Roman', Times, serif; font-size: 24px; line-height: 24px; font-weight: 300;">&</p>
+
+        <div class="pengantin">
+          <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/4th Photo.png" alt="Foto Pasangan"/></div>
+          <h2 id="nama-pengantin">Aditya Rizki Auli Dwibangga</h2>
+          <h3 id="orang-tua">PUTRA KEDUA DARI BAPAK <strong>SAYUTI SYAH ALAM</strong> DAN IBU <strong>ENDAH LESTARI</strong></h3>
+        </div>
+      </section>
+
+      <hr class="separator"/>
+
+      <section class="rangkaian-acara">
+        <h2 style="font-size: 24px; margin: 64px 0 64px 0; font-weight: 600;">RANGKAIAN ACARA</h2>
+
+        <h3 style="margin-bottom: 8px;">AKAD NIKAH</h3>
+        <p style="font-size: 18px;margin: 0; line-height: 24px"><strong>SABTU</strong>, 16 AGUSTUS 2025</p>
+        <p style="font-size: 22px;margin: 0; font-family: 'Times New Roman', Times, serif; line-height: 24px;">Pukul <strong>09.00 - Selesai</strong></p>
+       
+        <p style="margin-top: 20px; margin-bottom: 20px;">&</p>
+
+        <h3 style="margin-bottom: 8px;">RESEPSI</h3>
+        <p style="font-size: 18px;margin: 0; line-height: 24px"><strong>SABTU</strong>, 16 AGUSTUS 2025</p>
+        <p style="font-size: 22px;margin: 0; font-family: 'Times New Roman', Times, serif; line-height: 24px;">Pukul <strong>12.00 - 14.00</strong></p>
+       
+        <div class="lokasi">
+          <h3>DISELENGGARAKAN DI</h3>
+          <p style="font-size: 22px;margin: 8px; font-family: 'Times New Roman', Times, serif; font-weight: 600;">Aroem Resto & Cafe Jakarta</strong></p>
+          <p>Jl. Abdul Muis No.14, Petojo Sel., Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10160</p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.383110053539!2d106.81877307510652!3d-6.172036993815336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e32386af%3A0x46581525624def4b!2sAroem%20Resto%20%26%20Cafe%20Jakarta!5e0!3m2!1sid!2sid!4v1752031652966!5m2!1sid!2sid" 
+              width="376" 
+              height="200" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <div class="double-separator"></div>
+
+      <p style="font-size: 12px; line-height: normal;">Website ini lahir dari bentuk yang dicipta <strong>Aditya</strong>, <br>
+      dan dihidupkan oleh <strong>Ailsa</strong>
+      </p>
+  </section>
+    
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
