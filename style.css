@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 48px;
 }
 
 h2{
@@ -57,13 +57,13 @@ button {
   margin-top: 1em;
   border: none;
   border-radius: 6px;
-  background-color: #0077cc;
+  background-color: #3E63CC;
   color: white;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #005fa3;
+  background-color: #3E63CC;
 }
 
 img {
@@ -113,6 +113,104 @@ img {
   border-radius: 12px;
   overflow: hidden;
 }
+
+.form-ucapan {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.form-ucapan h2 {
+  color: #3E63CC; /* biru tua */
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+.form-ucapan form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-ucapan input,
+.form-ucapan textarea {
+  border: 1px solid #3E63CC;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  outline: none;
+}
+
+.form-ucapan input::placeholder,
+.form-ucapan textarea::placeholder {
+  color: #AAAAAA;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
+.form-ucapan button {
+  background-color: #3E63CC;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 200px;
+}
+
+.form-ucapan button:hover {
+  background-color: #2947a3;
+}
+
+.btn-wrapper{
+  justify-content: center;
+}
+
+#daftarUcapan {
+  margin-top: 24px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 150px;
+}
+
+.ucapan-item {
+  border-top: 0.5px solid #3E63CC;
+  padding: 16px 0;
+}
+
+.ucapan-nama {
+  color: #3E63CC;
+  font-size: 16px;
+  margin: 2px 0px 8px 0px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ucapan-isi {
+  font-weight: bold;
+  color: #3E63CC;
+  font-size: 20px;
+  margin: 0px 0px 2px 0px;
+  font-weight: normal;
+}
+
+.ucapan-tanggal {
+  font-size: 16px;
+  color: #3E63CC;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0px 0px 6px 0px;
+}
+
 
 .separator {
   border: none;
