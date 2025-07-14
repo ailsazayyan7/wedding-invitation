@@ -164,7 +164,7 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    threshold: 0.1 // bagian 10% dari element udah keliatan, langsung animasi
+    threshold: 0.05 // bagian 10% dari element udah keliatan, langsung animasi
   });
   
   sections.forEach(section => {
