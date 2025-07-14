@@ -22,7 +22,7 @@
     <audio id="bgMusic" src="assets/music.mp3" loop></audio>
     <button id="toggleMusic">🔊</button>
 
-    <section style="justify-content: center;">
+    <section class="fade-section" style="justify-content: center;">
       <section class="hero">
         <img src="assets/1st-photo.webp" alt="Foto Pasangan"/>
         <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: lighter; font-size: 18px;">UNDANGAN PERNIKAHAN</h2>
@@ -35,15 +35,17 @@
 
       <hr class="separator"/>
 
-      <section>
+      <section class="fade-section">
         <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/2nd-photo.webp" alt="Foto Pasangan"/></div>
-        <p style="margin-top: 32px;">“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”</p>
+        <p style="margin-top: 32px;">“<i>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan 
+          untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. 
+          Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</i>”</p>
         <p>(Q.S. Ar-Rum : 21)</p>
       </section>
 
       <hr class="separator"/>
 
-      <section>
+      <section class="fade-section">
         <div class="pengantin">
           <p style="margin-bottom: 32px;">Dengan syukur dan sukacita,
           kami dengan bahagia mengumumkan pernikahan kami kepada keluarga dan sahabat terkasih.</p>
@@ -105,19 +107,21 @@
             <button type="submit">Kirim Ucapan</button>
           </div>
         </form>
-        <div id="daftarUcapan"></div>
+        <section class="ucapan">
+          <div class="ucapan-container" id="daftarUcapan"></div>
+        </section>
+        
       </section>
-      
-
-      <div class="double-separator"></div>
-
-      <p style="font-size: 12px; line-height: normal;">Website ini lahir dari bentuk yang dicipta <strong>Aditya</strong>, <br>
-      dan dihidupkan oleh <strong>Ailsa</strong>
-      </p>
   </section>
     
   </main>
 
   <script type="module" src="script.js"></script>
 </body>
+<footer>
+  <div class="double-separator"></div>
+  <p style="font-size: 12px; line-height: normal;">Website ini lahir dari bentuk yang dicipta <strong>Aditya</strong>, <br>
+    dan dihidupkan oleh <strong>Ailsa</strong>
+  </p>
+</footer>
 </html>

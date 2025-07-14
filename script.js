@@ -114,6 +114,9 @@ window.addEventListener("DOMContentLoaded", () => {
     landing.style.display = "none";
     mainContent.classList.remove("hidden");
     music.play();
+    setTimeout(() => {
+      mainContent.classList.add('fade-in');
+    }, 50);
   });
 
   toggleMusic.addEventListener("click", () => {
@@ -151,7 +154,20 @@ window.addEventListener("DOMContentLoaded", () => {
 
   });
 
+  const sections = document.querySelectorAll('.fade-section');
 
-
-
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Optional: observer.unobserve(entry.target); // supaya animasi cuma sekali
+      }
+    });
+  }, {
+    threshold: 0.1 // bagian 10% dari element udah keliatan, langsung animasi
+  });
+  
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 
