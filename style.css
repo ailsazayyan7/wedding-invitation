@@ -4,9 +4,10 @@ body {
   padding: 0;
   text-align: center;
   background-color: #F3F4F1;
-  background-image: url(assets/background.png);
-  background-size: 1435px 956px;
-  background-repeat: repeat;
+  background-image: url(assets/background.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   color: #3E63CC;
 }
@@ -18,6 +19,7 @@ footer{
 .hidden {
   display: none;
 }
+
 
 #landing, #isiUndangan {
   position: relative;

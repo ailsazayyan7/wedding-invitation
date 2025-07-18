@@ -105,6 +105,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Elements
   const landing = document.getElementById("landing");
   const mainContent = document.getElementById("mainContent");
+  const hero = document.getElementsByClassName("hero");
   const openBtn = document.getElementById("openInvitation");
   const music = document.getElementById("bgMusic");
   const toggleMusic = document.getElementById("toggleMusic");
