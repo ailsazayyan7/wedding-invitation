@@ -108,15 +108,21 @@ window.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openInvitation");
   const music = document.getElementById("bgMusic");
   const toggleMusic = document.getElementById("toggleMusic");
+  const photo = document.getElementById("transitionPhoto");
+  const landingText = document.getElementById("landingText");
 
 
   openBtn.addEventListener("click", () => {
-    landing.style.display = "none";
-    mainContent.classList.remove("hidden");
-    music.play();
+    // Hilangkan teks & animasikan foto
+    landingText.classList.add("fade-out");
+    photo.classList.add("zoom-fade-out");
+  
     setTimeout(() => {
-      mainContent.classList.add('fade-in');
-    }, 50);
+      landing.style.display = "none";
+      mainContent.classList.remove("hidden");
+      mainContent.classList.add("fade-in");
+      music.play();
+    }, 1000); // sesuai durasi animasi
   });
 
   toggleMusic.addEventListener("click", () => {
