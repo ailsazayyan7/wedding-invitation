@@ -3,12 +3,20 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #F3F4F1;
+  /* background-color: #F3F4F1;
   background-image: url(assets/background.webp);
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   color: #3E63CC;
+}
+
+.bg-fixed {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: #F3F4F1;
+  background: url(assets/background.webp) center / cover no-repeat;
+  z-index: -1;
 }
 
 footer{
