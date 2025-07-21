@@ -10,7 +10,7 @@ body {
   position: fixed;
   inset: 0; /* top:0; right:0; bottom:0; left:0 */
   background-color: #F3F4F1;
-  background: url(assets/background.webp) center / cover no-repeat;
+  background: url(/assets/background.webp) center / cover no-repeat;
   z-index: -1;
 }
 
@@ -65,7 +65,7 @@ h3{
 }
 
 .hero {
-  background-image: url('assets/1st-photo.webp'); /* path ke gambar kamu */
+  background-image: url('/assets/1st-photo.webp'); /* path ke gambar kamu */
   position: absolute;
   height: 100vh; /* 1 full screen height */
   background-size: cover;
@@ -232,6 +232,11 @@ img {
 
 .form-ucapan {
   text-align: center;
+}
+
+/* untuk pengajian */
+body.pengajian .form-ucapan{
+  display: none;
 }
 
 .form-ucapan h2 {

@@ -132,17 +132,17 @@ window.addEventListener("DOMContentLoaded", () => {
 toggleMusic.addEventListener("click", () => {
   if (music.paused) {
     music.play();
-    icon.src = "assets/sound-on.svg";
+    icon.src = "/assets/sound-on.svg";
   } else {
     music.pause();
-    icon.src = "assets/sound-off.svg";
+    icon.src = "/assets/sound-off.svg";
   }
 });
 
 document.addEventListener("visibilitychange", () => {
   if (document.hidden && !music.paused) {
     music.pause();
-    icon.src = "assets/sound-off.svg";
+    icon.src = "/assets/sound-off.svg";
   }
 });
 

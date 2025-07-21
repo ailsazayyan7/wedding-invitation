@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/assets/icon.png" type="image/png" />
+</head>
+<body class="pengajian">
+  <!-- Landing Page -->
+  <div class="bg-fixed"></div>
+  <section id="landing">
+    <img class="landing-image" src="/assets/landing.png" alt="transitionPhoto" id="transitionPhoto" />
+    <div id="landingText">
+      <h3 style="margin-bottom: 12px;">UNDANGAN PENGAJIAN PERNIKAHAN</h3>
+      <h2 style="margin-top: 0;">Aditya & Ailsa</h2>
+      <p>Kepada Yth.
+      <br>Bapak/Ibu/Saudara/i</p>
+      <h3><b><span id="namaTamu"></span></b></h3>
+      <button id="openInvitation">Buka Undangan</button>
+    </div>
+  </section>
+
+  
+  <main id="mainContent" class="hidden">
+    <section class="hero">
+      <img id="landingText" src="/assets/bunga.png" alt="hiasan bunga" class="bunga-overlay" />
+      <div class="hero-text">
+        <div>Ailsa <span style="font-size: 32px;">&</span></div>
+        <div>Aditya</div>
+        <div class="hero-date">9 . 08 . 2025</div>
+      </div>
+    </section>
+
+    
+    <section id="isiUndangan">  
+      <audio id="bgMusic" src="/assets/music.mp3" loop></audio>
+      <button id="toggleMusic">
+        <img id="iconMusic" src="/assets/sound-on.svg" alt="Music Icon" />
+      </button>
+
+      <section class="fade-section">
+        <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="/assets/2nd-photo.webp" alt="Foto Pasangan"/></div>
+        <p style="margin-top: 32px;">“<i>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan 
+          untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa kasih dan sayang. 
+          Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</i>”</p>
+        <p>(Q.S. Ar-Rum : 21)</p>
+      </section>
+
+      <hr class="separator"/>
+
+      <section>
+        <p style="margin-bottom: 32px;">Dengan syukur dan sukacita,
+          kami dengan bahagia mengumumkan pernikahan kami kepada keluarga dan sahabat terkasih.</p>
+        <div class="pengantin"> 
+          <div class="fade-section" style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="/assets/3rd-photo.webp" alt="Foto Pasangan"/></div>
+          <h2 class="fade-section" id="nama-pengantin">Ailsa Zayyan Salsabila</h2>
+          <h3 class="fade-section" id="orang-tua">PUTRI PERTAMA DARI BAPAK <strong>M IHSAN DARIUS</strong> DAN IBU <strong>DIAN AYU HASANAH</strong></h3>
+        </div>
+
+        <p style="margin-top: 68px; margin-bottom: 68px; font-family: 'Times New Roman', Times, serif; font-size: 24px; line-height: 24px; font-weight: 300;">&</p>
+
+        <div class="pengantin">
+          <div class="fade-section" style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="/assets/4th-photo.webp" alt="Foto Pasangan"/></div>
+          <h2 class="fade-section" id="nama-pengantin">Aditya Rizki Auli Dwibangga</h2>
+          <h3 class="fade-section" id="orang-tua">PUTRA KEDUA DARI BAPAK <strong>SAYUTI SYAH ALAM</strong> DAN IBU <strong>ENDAH LESTARI</strong></h3>
+        </div>
+      </section>
+
+      <hr class="separator"/>
+
+      <section class="rangkaian-acara">
+        <h3 style="font-size: 20px; margin: 64px 0 64px 0; font-weight: 600;">RANGKAIAN ACARA</h3>
+
+        <h3 style="font-size: 16px; margin-bottom: 8px;">PENGAJIAN</h3>
+        <p style="font-size: 20px;margin: 0; line-height: 24px"><strong>SABTU</strong>, 9 AGUSTUS 2025</p>
+        <p style="font-size: 20px;margin: 0; line-height: 24px;">Pukul <strong>13.00 - Selesai</strong></p>
+       
+        <div class="lokasi">
+          <h3 style="font-size: 16px;" >DISELENGGARAKAN DI</h3>
+          <p style="font-size: 20px; margin: 8px; font-family: Arial, Helvetica, sans-serif; font-weight: 600;">RUMAH BAPAK SAYUTI</strong></p>
+          <p>Jl. Koni No.50 RT 005/RW 003, Cinangka, Sawangan, Depok</p>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1885473358843!2d106.7569824!3d-6.3696408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ef4c18ad77d5%3A0x6edcd39ad44d19d!2sCafe%20Ade!5e0!3m2!1sid!2sid!4v1753094237524!5m2!1sid!2sid" 
+              width="376" 
+              height="200" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <hr class="separator"/>
+
+      <section class="form-ucapan">
+        <h3 style="font-size: 20px; margin: 64px 32px 64px 32px; font-weight: 600;">UCAPAN UNTUK KAMI</h3>
+        <form id="formUcapan">
+          <input type="text" id="namaPengirim" name="namaPengirim" placeholder="Nama" required />
+          <textarea id="isiUcapan" name="isiUcapan" placeholder="Ucapan" rows="3" required></textarea>
+          <div class="btn-wrapper">
+            <button type="submit">Kirim Ucapan</button>
+          </div>
+        </form>
+        <section class="ucapan">
+          <div class="ucapan-container" id="daftarUcapan"></div>
+        </section>
+        <hr class="separator"/>
+      </section>
+
+
+      <section class="penutup fade-section">
+        <div class="fade-section" style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px; margin-bottom: 64px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="/assets/5th-photo.webp" alt="Foto Pasangan"/></div>
+        <p style="margin-top: 32px;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+          dan memberikan doa restu.
+        </p>
+      </section>
+    </section>
+    <div class="double-separator"></div>
+    <p style="font-size: 12px; line-height: normal; margin-bottom: 32px;">Website ini lahir dari bentuk yang dicipta <strong>Aditya</strong>, <br>
+      dan dihidupkan oleh <strong>Ailsa</strong>
+    </p>
+  </main>
+
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
