@@ -3,11 +3,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  /* background-color: #F3F4F1;
-  background-image: url(assets/background.webp);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center; */
   color: #3E63CC;
 }
 
@@ -28,11 +23,24 @@ footer{
 }
 
 
-#landing, #isiUndangan {
+#isiUndangan {
   position: relative;
   padding: 128px 1em 2em 1em;
   max-width: 480px;
   margin: 0 auto;
+}
+
+#landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  padding: 0 1em;
+  max-width: 480px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -321,9 +329,9 @@ img {
 
 .separator {
   border: none;
-  border-top: 1px solid #3E63CC; /* Warna biru yang kamu pakai */
-  width: 246px;                    /* Atur panjang garis */
-  margin: 4.25rem auto;             /* Tengah dan kasih jarak */
+  border-top: 1px solid #3E63CC;
+  width: 246px;  
+  margin: 4.25rem auto;   
 }
 
 .double-separator {
@@ -351,7 +359,7 @@ img {
   bottom: 0;
 }
 
-/* Optional: desktop view fallback */
+/* desktop view fallback */
 @media (min-width: 768px) {
   body {
     font-size: 18px;
