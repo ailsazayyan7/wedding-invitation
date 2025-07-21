@@ -92,6 +92,14 @@ h3{
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
+
+.hero-date {
+  font-size: 24px; 
+  font-weight: normal; 
+  text-align: left;
+  margin-top: 8px; 
+}
+
 #nama-pengantin{
   font-family: 'Times New Roman', Times, serif; 
   font-weight: 500; 
