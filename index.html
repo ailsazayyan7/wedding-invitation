@@ -44,7 +44,9 @@
     </section>
     <section id="isiUndangan">  
       <audio id="bgMusic" src="assets/music.mp3" loop></audio>
-      <button id="toggleMusic">🔊</button>
+      <button id="toggleMusic">
+        <img id="iconMusic" src="assets/sound-on.svg" alt="Music Icon" />
+      </button>
 
       <section class="fade-section">
         <div style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/2nd-photo.webp" alt="Foto Pasangan"/></div>
@@ -110,7 +112,7 @@
       <hr class="separator"/>
 
       <section class="form-ucapan">
-        <h3 style="font-size: 20px; margin: 80px 32px 64px 32px; font-weight: 600;">UCAPAN UNTUK KAMI</h3>
+        <h3 style="font-size: 20px; margin: 64px 32px 64px 32px; font-weight: 600;">UCAPAN UNTUK KAMI</h3>
         <form id="formUcapan">
           <input type="text" id="namaPengirim" name="namaPengirim" placeholder="Nama" required />
           <textarea id="isiUcapan" name="isiUcapan" placeholder="Ucapan" rows="3" required></textarea>

@@ -166,7 +166,7 @@ img {
   position: fixed;
   bottom: 2em;
   left: 2em;
-  background-color: rgba(0,0,0,0.5);
+  background-color: #f3f4f1bf;
   border: none;
   color: white;
   padding: 1em;
@@ -216,7 +216,6 @@ img {
 
 .form-ucapan {
   text-align: center;
-  padding: 2rem 1rem;
 }
 
 .form-ucapan h2 {

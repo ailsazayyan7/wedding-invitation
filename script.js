@@ -126,16 +126,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 1000); // sesuai durasi animasi
   });
 
-  toggleMusic.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      toggleMusic.textContent = "🔊";
-    } else {
-      music.pause();
-      toggleMusic.textContent = "🔇";
-    }
+
+const icon = document.getElementById("iconMusic");
+
+toggleMusic.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    icon.src = "assets/sound-on.svg";
+  } else {
+    music.pause();
+    icon.src = "assets/sound-off.svg";
   }
-  );
+});
 
   fetch('tamu.json')
     .then(res => res.json())
