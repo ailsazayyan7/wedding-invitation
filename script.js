@@ -109,8 +109,10 @@ window.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openInvitation");
   const music = document.getElementById("bgMusic");
   const toggleMusic = document.getElementById("toggleMusic");
+  const icon = document.getElementById("iconMusic");
   const photo = document.getElementById("transitionPhoto");
   const landingText = document.getElementById("landingText");
+  
 
 
   openBtn.addEventListener("click", () => {
@@ -127,8 +129,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
 
-const icon = document.getElementById("iconMusic");
-
 toggleMusic.addEventListener("click", () => {
   if (music.paused) {
     music.play();
@@ -139,29 +139,36 @@ toggleMusic.addEventListener("click", () => {
   }
 });
 
-  fetch('tamu.json')
-    .then(res => res.json())
-    .then(daftarTamu => {
-      const params = new URLSearchParams(window.location.search);
-      const rawNama = params.get('to') || '';
-      const namaTamu = rawNama.replace(/\+/g, ' ').trim();
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden && !music.paused) {
+    music.pause();
+    icon.src = "assets/sound-off.svg";
+  }
+});
 
-      const valid = daftarTamu.some(n => n.toLowerCase() === namaTamu.toLowerCase());
+fetch('tamu.json')
+  .then(res => res.json())
+  .then(daftarTamu => {
+    const params = new URLSearchParams(window.location.search);
+    const rawNama = params.get('to') || '';
+    const namaTamu = rawNama.replace(/\+/g, ' ').trim();
 
-      if (valid) {
-        document.getElementById('namaTamu').innerText = namaTamu;
-        document.getElementById('namaHero').innerText = namaTamu;
-      } else {
-        document.body.innerHTML = `
-          <section style="text-align: center; padding: 100px 20px;">
-            <h1>💌 Maaf</h1>
-            <p>Nama <strong>${namaTamu || "yang Anda masukkan"}</strong> tidak ada dalam daftar tamu kami.</p>
-          </section>
-        `;
-      }
-    });
+    const valid = daftarTamu.some(n => n.toLowerCase() === namaTamu.toLowerCase());
 
+    if (valid) {
+      document.getElementById('namaTamu').innerText = namaTamu;
+      document.getElementById('namaHero').innerText = namaTamu;
+    } else {
+      document.body.innerHTML = `
+        <section style="text-align: center; padding: 100px 20px;">
+          <h1>💌 Maaf</h1>
+          <p>Nama <strong>${namaTamu || "yang Anda masukkan"}</strong> tidak ada dalam daftar tamu kami.</p>
+        </section>
+      `;
+    }
   });
+
+});
 
   const sections = document.querySelectorAll('.fade-section');
 
@@ -169,7 +176,6 @@ toggleMusic.addEventListener("click", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Optional: observer.unobserve(entry.target); // supaya animasi cuma sekali
       }
     });
   }, {
