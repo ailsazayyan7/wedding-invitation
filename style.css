@@ -291,6 +291,23 @@ body.pengajian .form-ucapan{
   background-color: #2947a3;
 }
 
+.form-ucapan select {
+  border: 1px solid #3E63CC;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  outline: none;
+  color: #333; /* warna teks */
+}
+
+.form-ucapan select:invalid {
+  color: #AAAAAA; /* warna placeholder */
+}
+
 .btn-wrapper{
   justify-content: center;
 }
@@ -317,17 +334,35 @@ body.pengajian .form-ucapan{
   padding: 16px 0;
 }
 
-.ucapan-nama {
+.ucapan-header {
+  margin-bottom: 8px;
+  font-size: 0; /* menghapus spasi antar inline-block */
+}
+
+.ucapan-nama, .ucapan-kehadiran {
   color: #3E63CC;
   font-size: 16px;
   margin: 2px 0px 8px 0px;
   font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.ucapan-bullet {
+  font-weight: bold;
+  color: #3E63CC;
+}
+
+.ucapan-kehadiran{
+  font-style: italic;
+  font-size: 12px;
 }
 
 .ucapan-isi {
   font-weight: bold;
   color: #3E63CC;
-  font-size: 20px;
+  font-size: 16px;
   margin: 0px 0px 2px 0px;
   font-weight: normal;
 }

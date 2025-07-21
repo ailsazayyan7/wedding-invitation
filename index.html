@@ -108,13 +108,30 @@
         <h3 style="font-size: 20px; margin: 64px 32px 64px 32px; font-weight: 600;">UCAPAN UNTUK KAMI</h3>
         <form id="formUcapan">
           <input type="text" id="namaPengirim" name="namaPengirim" placeholder="Nama" required />
+          <select id="kehadiran" name="kehadiran" required>
+            <option value="">Konfirmasi Kehadiran</option>
+            <option value="Hadir ✓">Hadir</option>
+            <option value="Tidak Hadir 𐄂">Tidak Hadir</option>
+            <option value="Belum Yakin ﹖">Belum Yakin</option>
+          </select>
+          <input type="hidden" id="namaTamu" value="Tamu Undangan A">
           <textarea id="isiUcapan" name="isiUcapan" placeholder="Ucapan" rows="3" required></textarea>
           <div class="btn-wrapper">
             <button type="submit">Kirim Ucapan</button>
           </div>
         </form>
         <section class="ucapan">
-          <div class="ucapan-container" id="daftarUcapan"></div>
+          <div class="ucapan-container" id="daftarUcapan">
+            <div class="ucapan-item">
+              <div class="ucapan-header">
+                <span class="ucapan-nama">Shania Nabilah</span>
+                <span class="ucapan-bullet">•</span>
+                <span class="ucapan-kehadiran">Hadir</span>
+              </div>
+              <div class="ucapan-isi">Selamat ya! Semoga lancar sampai hari H.</div>
+              <div class="ucapan-tanggal">21 Juli 2025</div>
+            </div>
+          </div>
         </section>
       </section>
       <hr class="separator"/>

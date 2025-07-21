@@ -31,8 +31,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const nama = document.getElementById("namaPengirim").value.trim();
     const isi = document.getElementById("isiUcapan").value.trim();
+    const hadir = document.getElementById("kehadiran").value.trim();
 
-    if (!nama || !isi) {
+    if (!nama || !isi || !hadir) {
       alert("Harap isi semua kolom.");
       return;
     }
@@ -41,6 +42,7 @@ window.addEventListener("DOMContentLoaded", () => {
       await addDoc(collection(db, "ucapan"), {
         nama,
         isi,
+        hadir,
         waktu: serverTimestamp()
       });
 
@@ -54,13 +56,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   function tampilkanUcapanRealtime() {
     const list = document.getElementById("daftarUcapan");
-    list.innerHTML = "<p>Loading ucapan...</p>";
+    list.innerHTML = "<p>Memuat ucapan tamu undangan...</p>";
   
     const q = query(collection(db, "ucapan"), orderBy("waktu", "desc"));
   
     onSnapshot(q, (querySnapshot) => {
       if (querySnapshot.empty) {
-        list.innerHTML = "<p>Belum ada ucapan 🥲</p>";
+        list.innerHTML = "<p>Belum ada ucapan dari tamu undangan</p>";
         return;
       }
   
@@ -81,7 +83,8 @@ window.addEventListener("DOMContentLoaded", () => {
         : "Menunggu waktu...";
 
         item.innerHTML = `
-          <p class="ucapan-nama">${data.nama}</p>
+          <p class="ucapan-nama">${data.nama} <span class="ucapan-bullet">•</span> </p>
+          <p class="ucapan-kehadiran">${data.hadir}</p>
           <p class="ucapan-isi">${data.isi}</p>
           <p class="ucapan-tanggal">${tanggal}</p>
         `;
@@ -95,7 +98,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   
 
-  tampilkanUcapanRealtime(); // <--- PENTING
+  tampilkanUcapanRealtime(); // <--- get realtime data
 
   // Get URL param
   const params = new URLSearchParams(window.location.search);
@@ -116,7 +119,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
   openBtn.addEventListener("click", () => {
-    // Hilangkan teks & animasikan foto
+    // hide teks & animation foto
     landingText.classList.add("fade-out");
     photo.classList.add("zoom-fade-out");
   
@@ -179,7 +182,7 @@ fetch('tamu.json')
       }
     });
   }, {
-    threshold: 0.05 // bagian 10% dari element udah keliatan, langsung animasi
+    threshold: 0.05 // bagian 5% dari element sudah keliatan, langsung animasi
   });
   
   sections.forEach(section => {
