@@ -8,14 +8,10 @@ body {
 
 .bg-fixed {
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  inset: 0;
   background-color: #F3F4F1;
   background: url(/assets/background.webp) center / cover no-repeat;
   z-index: -1;
-}
-
-footer{
-  margin: 32px;
 }
 
 .hidden {
@@ -65,14 +61,15 @@ h3{
 }
 
 .hero {
-  background-image: url('/assets/1st-photo.webp'); /* path ke gambar kamu */
-  position: absolute;
+  background-image: url('/assets/1st-photo.webp');
+  position: static;
+  width: auto;
   height: 100vh; /* 1 full screen height */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #3E63CC; /* ganti sesuai kontras */
-  font-family: 'Times New Roman', Times, serif; /* gaya brutalist */
+  color: #3E63CC;
+  font-family: 'Times New Roman', Times, serif;
   top: 0;
   left: 0;
   right: 0;
@@ -100,7 +97,7 @@ h3{
   margin-top: 8px; 
 }
 
-#nama-pengantin{
+.nama-pengantin{
   font-family: 'Times New Roman', Times, serif; 
   font-weight: 500; 
   font-size: 40px; 
@@ -109,7 +106,7 @@ h3{
 }
 
 
-#orang-tua{
+.orang-tua{
   font-size: 16px; 
   font-weight: 400; 
   line-height: 20px; 
@@ -185,10 +182,14 @@ img {
   background-color: #f3f4f1bf;
   border: none;
   color: white;
-  padding: 1em;
+  padding: 12px;
   border-radius: 50%;
   z-index: 1;
   animation: glowPulse 2s infinite alternate;
+}
+
+#iconMusic{
+  width: 24px;
 }
 
 @keyframes glowPulse {
@@ -207,11 +208,6 @@ img {
   transform: translateX(-50%);
   width: 280px; /* Ubah sesuai ukuran */
   z-index: 2;
-}
-
-.hero{
-  position: static;
-  width: auto;
 }
 
 .lokasi {
@@ -301,11 +297,30 @@ body.pengajian .form-ucapan{
   box-sizing: border-box;
   background-color: white;
   outline: none;
-  color: #333; /* warna teks */
+  color: #333;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .form-ucapan select:invalid {
   color: #AAAAAA; /* warna placeholder */
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▾'; /* atau ganti dengan SVG via background-image */
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #3E63CC;
+  font-size: 18px;
 }
 
 .btn-wrapper{

@@ -56,16 +56,16 @@
           kami dengan bahagia mengumumkan pernikahan kami kepada keluarga dan sahabat terkasih.</p>
         <div class="pengantin"> 
           <div class="fade-section" style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/3rd-photo.webp" alt="Foto Pasangan"/></div>
-          <h2 class="fade-section" id="nama-pengantin">Ailsa Zayyan Salsabila</h2>
-          <h3 class="fade-section" id="orang-tua">PUTRI PERTAMA DARI BAPAK <strong>M IHSAN DARIUS</strong> DAN IBU <strong>DIAN AYU HASANAH</strong></h3>
+          <h2 class="fade-section nama-pengantin">Ailsa Zayyan Salsabila</h2>
+          <h3 class="fade-section orang-tua">PUTRI PERTAMA DARI BAPAK <strong>M IHSAN DARIUS</strong> DAN IBU <strong>DIAN AYU HASANAH</strong></h3>
         </div>
 
         <p style="margin-top: 68px; margin-bottom: 68px; font-family: 'Times New Roman', Times, serif; font-size: 24px; line-height: 24px; font-weight: 300;">&</p>
 
         <div class="pengantin">
           <div class="fade-section" style="max-width: 800px; height: 320px; overflow: hidden; border-radius: 8px;"><img style="width: 100%; height: 100%; object-position: center; object-fit: cover;" src="assets/4th-photo.webp" alt="Foto Pasangan"/></div>
-          <h2 class="fade-section" id="nama-pengantin">Aditya Rizki Auli Dwibangga</h2>
-          <h3 class="fade-section" id="orang-tua">PUTRA KEDUA DARI BAPAK <strong>SAYUTI SYAH ALAM</strong> DAN IBU <strong>ENDAH LESTARI</strong></h3>
+          <h2 class="fade-section nama-pengantin">Aditya Rizki Auli Dwibangga</h2>
+          <h3 class="fade-section orang-tua">PUTRA KEDUA DARI BAPAK <strong>SAYUTI SYAH ALAM</strong> DAN IBU <strong>ENDAH LESTARI</strong></h3>
         </div>
       </section>
 
@@ -108,12 +108,14 @@
         <h3 style="font-size: 20px; margin: 64px 32px 64px 32px; font-weight: 600;">UCAPAN UNTUK KAMI</h3>
         <form id="formUcapan">
           <input type="text" id="namaPengirim" name="namaPengirim" placeholder="Nama" required />
-          <select id="kehadiran" name="kehadiran" required>
-            <option value="">Konfirmasi Kehadiran</option>
-            <option value="Hadir ✓">Hadir</option>
-            <option value="Tidak Hadir 𐄂">Tidak Hadir</option>
-            <option value="Belum Yakin ﹖">Belum Yakin</option>
-          </select>
+          <div class="select-wrapper">
+            <select id="kehadiran" name="kehadiran" required>
+              <option value="">Konfirmasi Kehadiran</option>
+              <option value="Hadir ✓">Hadir</option>
+              <option value="Tidak Hadir 𐄂">Tidak Hadir</option>
+              <option value="Belum Yakin ﹖">Belum Yakin</option>
+            </select>
+          </div>
           <input type="hidden" id="namaTamu" value="Tamu Undangan A">
           <textarea id="isiUcapan" name="isiUcapan" placeholder="Ucapan" rows="3" required></textarea>
           <div class="btn-wrapper">
