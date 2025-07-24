@@ -37,6 +37,7 @@ fetch('tamu.json')
         <section style="text-align: center; padding: 100px 20px;">
           <h1>💌 Maaf</h1>
           <p>Nama <strong>${namaTamu || "yang Anda masukkan"}</strong> tidak ada dalam daftar tamu kami.</p>
+          <p>Silakan cek kembali link undangannya atau hubungi Ailsa / Aditya jika ada kendala ya :)</p>
         </section>
       `;
     }
@@ -81,7 +82,7 @@ fetch('tamu.json')
   
     onSnapshot(q, (querySnapshot) => {
       if (querySnapshot.empty) {
-        list.innerHTML = "<p>Belum ada ucapan dari tamu undangan</p>";
+        list.innerHTML = "<p><i>Belum ada ucapan dari tamu undangan.</i></p>";
         return;
       }
   
